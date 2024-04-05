@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: "{{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv"
 
 requirements:
   build:
@@ -35,6 +35,10 @@ about:
   dev_url: https://github.com/mitsuhiko/pluginbase
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/46418
+    reason: Client request
   recipe-maintainers:
+    - ianaobi
     - windelbouwman
     - abloemert
