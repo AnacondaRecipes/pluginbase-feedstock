@@ -20,10 +20,13 @@ requirements:
   build:
     - python
     - pip
+    - wheel
   run:
     - python
 
 test:
+  commands:
+    - pip check 
   imports:
     - pluginbase
 
